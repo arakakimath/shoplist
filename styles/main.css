@@ -1,0 +1,61 @@
+main {
+  font: var(--paragraph);
+  color: var(--content-secondary);
+  display: grid;
+  gap: calc(12rem/16);
+}
+
+main > div {
+  background-color: var(--bg-secondary);
+  border-radius: calc(12rem/16);
+  display: grid;
+  grid-template-columns: 1fr 2rem;
+  align-items: center;
+  min-height: calc(49rem/16);
+  &>div:nth-child(1) {
+    margin-left: calc(12rem/16);
+    display: grid;
+    grid-template-columns: 1rem 1fr;
+    gap: calc(12rem/16);
+    align-items: center;
+    justify-items: start;
+  }
+}
+
+.removeButton, .checkbox {
+  height: 1rem;
+  width: 1rem;
+}
+
+.checkbox {
+  background-image: url(../assets/state=Default.svg);
+  position: relative;
+  & input {
+    all: unset;
+    position: absolute;
+    inset: 0;
+  }
+  &:hover {
+    background-image: url(../assets/state=hover.svg);
+  }
+  &:has(:checked) {
+    background-image: url(../assets/state=selected.svg);
+  }
+}
+
+.removeButton {
+  margin-right: calc(12rem/16);
+  background-image: url(../assets/Frame.svg);
+  position: relative;
+  & button {
+    all: unset;
+    position: absolute;
+    inset: 0;
+  }
+}
+
+@media (width < 80em) {
+  main > div {
+    min-height: calc(57rem/16);
+  }
+}

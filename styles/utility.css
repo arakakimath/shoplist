@@ -8,6 +8,10 @@
   color: var(--always-white);
 }
 
+.pattern {
+  display: none;
+}
+
 @media (width < 80em) {
   .desktopOnly {
     display: none;
