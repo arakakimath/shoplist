@@ -1,0 +1,10 @@
+header {
+  font: var(--header);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-block: calc(25rem/16) 2rem;
+  margin-inline: auto;
+  max-width: calc(156rem/16);
+  color: var(--content-secondary);
+}

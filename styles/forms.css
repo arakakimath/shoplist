@@ -1,0 +1,50 @@
+form {
+  display: grid;
+  grid-template-columns: 73.81% 1fr;
+  gap: 1rem;
+  margin-bottom: calc(40rem/16);
+}
+
+form input {
+  all: unset;
+  border-radius: calc(12rem/16);
+  height: calc(44rem/16);
+  width: 100%;
+  border: 2px solid var(--border-primary);
+  &:hover {
+    border-color: var(--border-hover);
+  }
+  &:focus {
+    border-color: var(--color-brand);
+  }
+}
+
+form div {
+  border-radius: calc(12rem/16);
+  background-color: var(--color-brand);
+  position: relative;
+  height: calc(44rem/16);
+  text-align: center;
+  &:hover {
+    background-color: var(--color-brand-hover);
+  }
+}
+
+form span {
+  vertical-align: center;
+  position: absolute;
+  inset: 0;
+  top: 25%;
+}
+
+form div button {
+  all: unset;
+  position: absolute;
+  inset: 0;
+}
+
+@media (width < 80em) {
+  form {
+    grid-template-columns: 1fr;
+  }
+}

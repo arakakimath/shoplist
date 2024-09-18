@@ -29,21 +29,54 @@
 
   /* fonts */
   --font-family: "Inter", system-ui, sans-serif;
+  --ff-sora: "Sora", system-ui, sans-serif;
   --fw-base: 400; /* regular   */
   --fw-md:   500; /* medium    */
   --fw-sb:   600; /* semi-bold */
   --fw-bold: 700; /* bold      */
 
-  --title: var(--fw-bold) 1.5rem/2  var(--font-family);
+  --title: var(--fw-bold) 1.5rem/1.33  var(--font-family);
   --label: var(--fw-sb)   1rem/1.25 var(--font-family);
   --paragraph: var(--fw-md) 1rem/1.25 var(--font-family);
-  --link: var(--fw-md) calc(14rem/16)/1 var(--font-family);
+  --link: var(--fw-md) calc(14rem/16)/1.14 var(--font-family);
+  --header: var(--fw-bold) calc(27rem/16)/calc(40/26.5) var(--ff-sora);
 } 
 
 html {
   font-family: var(--font-family);
   font-weight: var(--fw-base);
   font-size: 1rem;
-  line-height: 100%;
-  color: var(--content-primary);
+  line-height: 140%;
+  color: var(--content-tertiary);
+}
+
+body {
+  background-color: var(--bg-primary);
+}
+
+body > div {
+  max-width: calc(627rem/16);
+  margin-inline: auto;
+}
+
+body > div:nth-child(2) {
+  margin-block: 2rem 1rem;
+}
+
+body > div:nth-child(3) {
+  margin-bottom: calc(44rem/16);
+}
+
+img {
+  height: 1rem;
+}
+
+@media (width < 80em) {
+  :root {
+
+  }
+
+  body > div {
+    max-width: calc(327rem/16);
+  }
 }
