@@ -31,10 +31,9 @@ form div {
 }
 
 form span {
-  vertical-align: center;
-  position: absolute;
-  inset: 0;
-  top: 25%;
+  display: grid;
+  height: 100%;
+  align-items: center;
 }
 
 form div button {
