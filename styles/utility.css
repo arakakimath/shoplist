@@ -12,6 +12,10 @@
   display: none;
 }
 
+.line-through {
+  text-decoration: line-through;
+}
+
 @media (width < 80em) {
   .desktopOnly {
     display: none;

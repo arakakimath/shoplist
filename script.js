@@ -33,6 +33,10 @@ form.onsubmit = (event) => {
 
     main.append(divParent);
 
+    checkbox.addEventListener('click', function() {
+      mainText.classList.toggle("line-through");
+    });
+
     button.addEventListener('click', () => {
       main.removeChild(divParent);
       footer.classList.remove("hidden");
