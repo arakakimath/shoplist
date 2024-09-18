@@ -3,6 +3,7 @@ main {
   color: var(--content-secondary);
   display: grid;
   gap: calc(12rem/16);
+  margin-bottom: calc(36rem/16);
 }
 
 main > div {
