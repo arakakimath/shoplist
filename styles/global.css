@@ -54,7 +54,7 @@ body {
   background-color: var(--bg-primary);
 }
 
-body > div , main {
+body > div , main, footer {
   max-width: calc(627rem/16);
   margin-inline: auto;
 }
@@ -76,7 +76,7 @@ img {
 
   }
 
-  body > div, main {
+  body > div, main, footer {
     max-width: calc(327rem/16);
   }
 }

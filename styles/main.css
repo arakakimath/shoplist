@@ -8,26 +8,22 @@ main {
 main > div {
   background-color: var(--bg-secondary);
   border-radius: calc(12rem/16);
-  display: grid;
-  grid-template-columns: 1fr 2rem;
-  align-items: center;
   min-height: calc(49rem/16);
-  &>div:nth-child(1) {
-    margin-left: calc(12rem/16);
+  & > div {
+    padding-inline: calc(12rem/16);
+    padding-block: .5rem;
     display: grid;
-    grid-template-columns: 1rem 1fr;
+    grid-template-columns: 1rem 1fr 2rem;
     gap: calc(12rem/16);
     align-items: center;
-    justify-items: start;
+    height: 100%;
+    width: 100%;
   }
 }
 
-.removeButton, .checkbox {
+.checkbox {
   height: 1rem;
   width: 1rem;
-}
-
-.checkbox {
   background-image: url(../assets/state=Default.svg);
   position: relative;
   & input {
@@ -44,8 +40,11 @@ main > div {
 }
 
 .removeButton {
+  height: 2rem;
+  width: 2rem;
   margin-right: calc(12rem/16);
-  background-image: url(../assets/Frame.svg);
+  background-image: url(../assets/icon\ delete.svg);
+  object-fit: ;
   position: relative;
   & button {
     all: unset;
@@ -57,5 +56,8 @@ main > div {
 @media (width < 80em) {
   main > div {
     min-height: calc(57rem/16);
+    & > div {
+      padding: calc(12rem/16);
+    }
   }
 }

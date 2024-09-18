@@ -1,0 +1,32 @@
+footer {
+  margin-top: calc(36rem/16);
+}
+
+footer > div {
+  padding-inline: calc(12rem/16);
+  padding-block: .5rem;
+  display: grid;
+  gap: .5rem;
+  align-items: center;
+  grid-template-columns: 1.25rem 1fr 1.25rem;
+  background-color: var(--color-danger);
+  border-radius: calc(12rem/16);
+}
+
+.removeX {
+  position: relative;
+  height: 1.25rem;
+  width: 1.25rem;
+  background-image: url(../assets/delete-small.svg);
+  & button {
+    all: unset;
+    position: absolute;
+    inset: 0;
+  }
+}
+
+@media (width < 80em) {
+  footer > div {
+    padding: calc(12rem/16);
+  }
+}
