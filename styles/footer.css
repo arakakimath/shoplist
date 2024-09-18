@@ -1,5 +1,5 @@
 footer {
-  margin-top: calc(36rem/16);
+  margin-block: calc(36rem/16);
 }
 
 footer > div {
