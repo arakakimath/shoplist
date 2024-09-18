@@ -18,6 +18,7 @@ form.onsubmit = (event) => {
     //criando span e adicionando o input dentro
     const mainText = document.createElement("span");
     mainText.textContent = input.value;
+    input.value = ""; //clear
 
     const button = document.createElement("button");
     button.type = "button";
