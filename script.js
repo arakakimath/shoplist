@@ -4,10 +4,28 @@ const main = document.querySelector("main");
 const footer = document.querySelector("footer");
 const footerRemoveButton = document.querySelector("footer button");
 
+input.addEventListener("keyup", (event) => {
+  if (input.value[0] !== " ") {
+    input.value = " " + input.value
+  }
+})
+
+input.addEventListener("focus", (event) => {
+  if (input.value[0] !== " ") {
+    input.value = " " + input.value
+  }
+})
+
+input.addEventListener("blur", (event) => {
+  if (input.value === " ") {
+    input.value = ""
+  }
+})
+
 form.onsubmit = (event) => {
   event.preventDefault();
 
-  if (input.value !== "") {
+  if (input.value.trim() !== "") {
     //criando div e input:checkbox e depois colocando o input dentro da div
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
@@ -19,6 +37,8 @@ form.onsubmit = (event) => {
     const mainText = document.createElement("span");
     mainText.textContent = input.value;
     input.value = ""; //clear
+    
+    input.focus();
 
     const button = document.createElement("button");
     button.type = "button";
